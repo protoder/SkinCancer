@@ -1,0 +1,186 @@
+#header {
+	margin-top: 18px; grid-template-columns: auto 1fr;
+}
+#header .title {
+	display: flex; align-items: center;
+}
+#header .title img {
+	height: 41px;
+}
+#header .title h1 {
+	margin: 0px 0px 0px 10px; font-size: 30px; font-weight: 100;
+}
+#header .title > a {
+	text-decoration: none; display: inherit;
+}
+#header .title > a:hover {
+	animation:shine 2s forwards; -webkit-mask-image: linear-gradient(-75deg, rgb(0, 0, 0) 30%, rgba(0, 0, 0, 0.5) 50%, rgb(0, 0, 0) 70%); -webkit-mask-size: 200%;
+}
+#header .extra-links {
+	text-align: right; display: flex; flex-direction: column;
+}
+#header .extra-links a {
+	transition:filter 0.3s; text-decoration: none;
+}
+#header .extra-links a span {
+	font-size: 15px;
+}
+#header .extra-links a:hover {
+	
+}
+#header .extra-links a img {
+	height: 20px; vertical-align: text-bottom;
+}
+#header .extra-links a:not(:first-child) img {
+	margin-top: 4px;
+}
+#header .ui-config {
+	margin-top: 4px; display: flex; justify-content: flex-end; align-items: center; gap: 4px;
+}
+#header .ui-config [for='language-selection'] {
+	line-height: 0;
+}
+#header .ui-config #language-selection {
+	padding: 0px 6px;
+}
+#header .ui-config #theme-toggle {
+	height: 18px; display: flex; cursor: pointer; user-select: none;
+}
+#language-selection {
+	max-width: 200px;
+}
+#warnings {
+	font-size: 13px;
+}
+#warnings > div {
+	margin: 10px 0px; padding: 8px;
+}
+#warnings > div > p {
+	margin: 0px; white-space: pre-wrap;
+}
+#warnings > div > p {
+	
+}
+#warnings > div > p a {
+	
+}
+div[id*='section'] {
+	margin-top: 12px;
+}
+div[id*='section'] .header {
+	display: flex; cursor: pointer;
+}
+div[id*='section'] .header img {
+	transition:transform 0.4s; height: 30px; transform: rotate(180deg);
+}
+div[id*='section'] .header h2 {
+	margin: 0px 0px 0px 15px; display: inline;
+}
+div[id*='section'] .content {
+	margin: 5px 10px 0px; display: none;
+}
+#datas-add-buttons {
+	grid-gap: 5px; grid-template-columns: 1fr 1fr 1fr;
+}
+.option-container {
+	margin-top: 4px;
+}
+.option-container > span {
+	margin-right: 10px;
+}
+.option-container.multiple-input > img {
+	height: 23px; vertical-align: middle; cursor: pointer;
+}
+.option-container.multiple-input > div {
+	margin-left: 20px;
+}
+.option-container.multiple-input > div > div {
+	margin-top: 2px; grid-gap: 4px; grid-template-columns: 1fr auto;
+}
+#datas-list > div {
+	margin-top: 2px; grid-gap: 4px; grid-template-columns: 1fr auto;
+}
+.option-container.multiple-input > div > div.dual-value {
+	grid-template-columns: 1fr 1fr auto;
+}
+#datas-list > div {
+	grid-template-columns: 1fr 1fr auto;
+}
+.option-container.multiple-input > div > div > img {
+	padding: 2px 0px; height: 100%; cursor: pointer;
+}
+#datas-list > div > img {
+	padding: 2px 0px; height: 100%; cursor: pointer;
+}
+.option-container.input {
+	grid-gap: 5px; grid-template-columns: auto 1fr;
+}
+.option-container.input.with-browse {
+	grid-template-columns: auto 1fr auto;
+}
+#current-command textarea {
+	width: 100%;
+}
+#output {
+	display: none;
+}
+.show#output {
+	display: block;
+}
+#output textarea {
+	width: 100%; white-space: pre; -ms-overflow-y: hidden;
+}
+#output textarea.failure {
+	
+}
+#common-issue-link {
+	text-align: center; font-size: 12px; margin-bottom: 5px; display: none;
+}
+.show#common-issue-link {
+	display: block;
+}
+#common-issue-link a {
+	text-decoration: none;
+}
+#common-issue-link a:hover {
+	
+}
+#package-button-wrapper {
+	display: flex;
+}
+#package-button {
+	padding: 0px 30px; transition:background-color 0.3s; width: 100%; height: 38px; text-align: center; color: white; text-transform: uppercase; letter-spacing: 0.1rem; font-size: 15px; white-space: nowrap; box-sizing: border-box;
+}
+#open-output-folder-button {
+	padding: 0px 30px; transition:background-color 0.3s; width: 100%; height: 38px; text-align: center; color: white; text-transform: uppercase; letter-spacing: 0.1rem; font-size: 15px; white-space: nowrap; box-sizing: border-box;
+}
+#package-button:hover {
+	
+}
+#open-output-folder-button:hover {
+	
+}
+:disabled#package-button {
+	cursor: not-allowed;
+}
+#open-output-folder-button {
+	margin-left: 4px; display: none;
+}
+.show#open-output-folder-button {
+	display: block;
+}
+.loading-spinner-wrapper {
+	left: 0px; top: 0px; width: 100%; height: 100vh; display: flex; position: fixed; justify-content: center; align-items: center;
+}
+.loading-label {
+	color: white;
+}
+.loading-spinner {
+	border-radius: 50%; width: 8em; height: 8em;
+}
+.loading-spinner::after {
+	border-radius: 50%; width: 8em; height: 8em;
+}
+.loading-spinner {
+	border-width: 1.1em; border-style: solid; border-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.2) rgb(255, 255, 255); margin: 60px auto; animation:load8 1.1s linear infinite; text-indent: -9999em; font-size: 10px; position: relative; transform: translateZ(0px); -webkit-transform: translateZ(0); -webkit-animation: load8 1.1s infinite linear;
+}

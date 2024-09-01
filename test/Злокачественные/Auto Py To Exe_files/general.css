@@ -1,0 +1,95 @@
+@font-face {
+	font-family: Nunito;
+	src: url(../Nunito-Light.ttf);
+}
+@font-face {
+	font-family: Vazirmatn;
+	src: url(../Vazirmatn-Light.ttf);
+	font-weight: 400;
+	font-style: normal;
+	unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+:root {
+	
+}
+.dark-theme {
+	
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0px 18px 10px; font-family: "Vazirmatn", "Nunito", Helvetica, Arial, sans-serif; font-weight: 100;
+}
+.mid {
+	margin: auto; max-width: 800px;
+}
+h2 {
+	margin: 10px 0px 2px; font-size: 25px; font-weight: normal;
+}
+h3 {
+	margin: 10px 0px 4px; font-size: 17px;
+}
+.sub_header {
+	margin: 10px 2px 4px; font-size: 17px;
+}
+h2 > small {
+	font-size: 13px;
+}
+button {
+	padding: 4px; font-family: "Vazirmatn", "Nunito", Helvetica, Arial, sans-serif; font-weight: 100;
+}
+input {
+	padding: 4px; font-family: "Vazirmatn", "Nunito", Helvetica, Arial, sans-serif; font-weight: 100;
+}
+select {
+	padding: 4px; font-family: "Vazirmatn", "Nunito", Helvetica, Arial, sans-serif; font-weight: 100;
+}
+input {
+	
+}
+select {
+	
+}
+textarea {
+	
+}
+select option {
+	
+}
+input:focus {
+	
+}
+button {
+	background: none; border-width: 2px; border-style: solid; padding: 3px 8px; transition:border 0.3s, background 0.3s; cursor: pointer;
+}
+button:not(.selected):not(.unselected):hover {
+	
+}
+button.selected {
+	
+}
+button.unselected:hover {
+	
+}
+button.unselected {
+	
+}
+button.large {
+	border-width: 3px; padding: 8px;
+}
+.info_icon {
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAq0lEQVR4XnWQywrDIBBF82P+WPtXebiSbJKtq0jAtVAEwW0WIZ16p04aWjpwcbge5tU0Nfq+V13XteV9QDVX8i/Qrei5LAtt28ZCXuADf9dKxzzPhEgpsRDwKqwatCiiaZrIe09aazLGMOicAwi1qIh5xGAw50z7vtM4juyB+QFDCFzNWnt6DEpr0bquPMIwDKcnrXkZMWOMrAv0XqZufhf4C/ycR6JW/nvwF51vE+IcomqCAAAAAElFTkSuQmCC") no-repeat 0px 0px; width: 10px; height: 10px; overflow: hidden; margin-left: 0.25em; vertical-align: middle; display: inline-block;
+}
+.note {
+	margin: 8px 0px 0px; font-size: 14px; font-style: italic;
+}
+.filepath-browse-layout {
+	grid-gap: 4px; grid-template-columns: 1fr 120px;
+}
+#icon-invalid-warning {
+	padding-top: 4px; font-size: 14px;
+}
+.noselect {
+	-ms-user-select: none; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; user-select: none;
+}

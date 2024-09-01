@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Классификатор новообразований</title>
+    <style>
+        #result {
+            font-size: 24px; /* Увеличенный шрифт */
+            margin-top: 20px;
+        }
+        .malignant {
+            color: red; /* Красный цвет для злокачественного */
+        }
+    </style>
+</head>
+<body>
+    <h1>Классификатор новообразований</h1>
+    <form id="uploadForm">
+        <input type="file" id="imageInput" accept="image/*" required>
+        <button type="submit">Отправить</button>
+    </form>
+    <p id="result"></p>
+    <img id="uploadedImage" style="max-width: 100%; height: auto; display: none;" alt="Загруженное изображение">
+
+    <script>
+        const form = document.getElementById('uploadForm');
+        const imageInput = document.getElementById('imageInput');
+        const resultText = document.getElementById('result');
+        const uploadedImage = document.getElementById('uploadedImage');
+
+        // Обработчик для отображения изображения после выбора файла
+        imageInput.addEventListener('change', (event) => {
+            // Очищаем результат при выборе нового файла
+            resultText.innerText = '';
+            resultText.className = ''; // Сбрасываем класс результата
+
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    uploadedImage.src = e.target.result;
+                    uploadedImage.style.display = 'block';  // Отображаем изображение
+                };
+                reader.readAsDataURL(file);  // Преобразуем файл в Data URL
+            }
+        });
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData();
+            formData.append('file', imageInput.files[0]);
+
+            const response = await fetch('http://127.0.0.1:8000/predict/', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+
+            // Если результат "Злокачественный", применяем класс malignant
+            if (data.class === 'Злокачественный') {
+                resultText.className = 'malignant';
+            } else {
+                resultText.className = ''; // Сбрасываем класс, если результат другой
+            }
+
+            resultText.innerText = `Результат: ${data.class}`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+:root {
+	
+}
+.modal-coverage {
+	overflow: auto; position: fixed; z-index: 1;
+}
+.modal-coverage-hidden {
+	display: none;
+}
+.modal-content {
+	margin: auto; padding: 16px; width: 80%; max-width: 600px;
+}
+.close-btn {
+	font-size: 20px; font-weight: bold; float: right;
+}
+.close-btn:hover {
+	text-decoration: none; cursor: pointer;
+}
+.close-btn:focus {
+	text-decoration: none; cursor: pointer;
+}
+.modal-section {
+	padding: 4px;
+}
+.modal-header h2 {
+	margin: 0px;
+}
+.modal-footer {
+	padding-top: 8px;
+}
+.modal-btn {
+	margin-right: 4px;
+}
